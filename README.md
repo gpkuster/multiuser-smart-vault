@@ -1,6 +1,6 @@
 # SmartVault System 🏦
 
-(work in progress) This project implements a decentralized **Smart Vault system** in Solidity, where users can create individual vault contracts to deposit and withdraw Ether securely, with a configurable **maximum balance limit**. Vaults can only be created via a central **Vault Factory**, following key Solidity design patterns and security best practices.
+This project implements a decentralized **Smart Vault system** in Solidity, where users can create individual vault contracts to deposit and withdraw Ether securely, with a configurable **maximum balance limit**. Vaults can only be created via a central **Vault Factory**, following key Solidity design patterns and security best practices.
 
 ## 📂 Project Structure
 
@@ -26,7 +26,8 @@ Steps to test:
 2. Compile both contracts (starting with `SmartVault.sol`).
 3. Deploy `VaultFactory`.
 4. Use the `createVault(uint _maxBalance)` function to create a new vault.
-5. Interact with your deployed vault by calling deposit (via low-level value transfer), `withdraw()`, or `setPaused()`.
+5. Take the address of the created Vault from the logs and use it to load the deployed vault in Remix by clicking "At Address" under the `SmartVault` contract. This allows you to interact directly with the specific vault instance you created.
+6. Interact with your deployed Vault by calling deposit (via low-level value transfer), `withdraw()`, or `setPaused()`.
 
 ## 🔒 Security Considerations
 
